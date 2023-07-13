@@ -15,7 +15,7 @@ aTheme <- function(
   success = NULL,
   info = NULL,
   warning = NULL,
-  danger = NULL,
+  danger = NULL
 ){
   theme <- bs_theme(
     version = 5L,

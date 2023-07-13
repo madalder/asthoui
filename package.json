@@ -1,0 +1,29 @@
+{
+  "name": "asthoui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "none": "webpack --config webpack.dev.js --mode=none",
+    "development": "webpack --config webpack.dev.js",
+    "production": "webpack --config webpack.prod.js",
+    "watch": "webpack --config webpack.dev.js -d --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devOpifex/asthoui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devOpifex/asthoui/issues"
+  },
+  "homepage": "https://github.com/devOpifex/asthoui#readme",
+  "devDependencies": {
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-merge": "^5.9.0"
+  }
+}
