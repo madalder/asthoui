@@ -19,13 +19,17 @@ $.extend(storiesBinding, {
     return el.id;
   },
   renderValue: (el, data) => {
-    console.log(data);
     $(el).find(".stories-list").html(createCards(data));
 
     var $story = $('.story');
     var lastCard = $(".story-list .story").length - 1;
 
-    $('.story').on("click", function(){
+    resize(el);
+    window.onresize = () => {
+      resize(el);
+    } 
+
+    $(el).on("click", function(){
       var prependList = function() {
         if( $('.story').hasClass('activeNow') ) {
           var $slicedCard = $('.story').slice(lastCard).removeClass('transformThis activeNow');
@@ -41,3 +45,7 @@ $.extend(storiesBinding, {
 
 Shiny.outputBindings.register(storiesBinding, "asthoui.storiesBinding");
 
+const resize = (el) => {
+  let w = $(el).width();
+  $(el).find(".stories-list").width(w - 12 + "px");
+}

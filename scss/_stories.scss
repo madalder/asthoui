@@ -6,31 +6,13 @@ $default-min: 10%;
   width: 100%;
   height: 900px;
   background-color: #fff;
-  padding: 50px 80px;
   
   .stories-stack {
-    width: 500px;
-    height: 250px;
+    min-height: 25rem;
     position: absolute;
-    margin: 20px auto;
 
-    .prev {
-      left: 15px;
-      right: auto;
-    }
-
-    .next {
-      left: auto;
-      right: 15px;
-    }
-
-    .carousel .buttons:hover {
-      color: #C01313 ;
-      background: #fff;
-    }
-    
     .stories-list {
-      width: 300px;
+      width: 30rem;
 
       li {
           transition: all 100ms ease-in-out;

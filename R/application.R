@@ -1,6 +1,6 @@
-#' Page
+#' Atho themed application
 #' 
-#' Astho themed page.
+#' Astho themed application.
 #' 
 #' @param ... Content of the page, passed to [shiny::navbarPage()].
 #' @param title Title of the application.
@@ -9,7 +9,7 @@
 #' @importFrom shiny navbarPage
 #' 
 #' @export
-aPage <- function(
+asthoApp <- function(
   ...,
   title = aLogo(),
   window_title = "Astho"
@@ -20,6 +20,7 @@ aPage <- function(
     title,
     theme = aTheme(),
     header = list(aDeps()),
+    windowTitle = window_title,
     ...
   )
 }

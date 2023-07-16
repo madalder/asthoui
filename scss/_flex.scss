@@ -1,0 +1,28 @@
+html {
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    flex: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+
+    .flex-left {
+      order: 0;
+      flex-basis: 15%;
+      flex-shrink: 1;
+    }
+
+    .flex-center {
+      flex-grow: 4;
+      order: 1;
+      flex-basis: 60%;
+    }
+
+    .flex-right {
+      order: 2;
+      flex-basis: 25%;
+      flex-shrink: 1;
+    }
+  }
+}

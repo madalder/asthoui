@@ -1,3 +1,4 @@
+cat("Building CSS\n")
 output <- sass::sass(
   sass::sass_file(
     'scss/_stories.scss'
