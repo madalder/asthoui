@@ -2,6 +2,8 @@
 % Please edit documentation in R/theme.R
 \name{aTheme}
 \alias{aTheme}
+\alias{aDeps}
+\alias{serve_assets}
 \title{Theme}
 \usage{
 aTheme(
@@ -13,11 +15,15 @@ aTheme(
   warning = NULL,
   danger = NULL
 )
+
+aDeps()
+
+serve_assets()
 }
 \arguments{
 \item{...}{Passed to \code{\link[bslib:bs_theme]{bslib::bs_theme()}}.}
 
-\item{primary}{Primary color passed to \code{\link[bslib:bs_theme]{bslib::bs_theme()}}.}
+\item{primary, secondary, success, info, warning, danger}{Colors.}
 }
 \description{
 Default Astho theme.

@@ -2,8 +2,8 @@
 #' 
 #' Default Astho theme.
 #' 
-#' @param primary Primary color passed to [bslib::bs_theme()].
 #' @param ... Passed to [bslib::bs_theme()].
+#' @param primary,secondary,success,info,warning,danger Colors.
 #' 
 #' @importFrom bslib bs_theme bs_add_rules font_google
 #' 
@@ -31,4 +31,23 @@ aTheme <- function(
   )
 
   return(theme)
+}
+
+#' @rdname aTheme
+#' @export
+aDeps <- function() {
+  htmltools::htmlDependency(
+    name = "asthoui",
+    version = utils::packageVersion("asthoui"),
+    src = "packer",
+    stylesheet = "styles.min.css",
+    package = "asthoui"
+  )
+}
+
+#' @importFrom shiny addResourcePath
+#' @rdname aTheme
+#' @export
+serve_assets <- function() {
+  addResourcePath("assets", system.file("assets", package = "asthoui"))
 }

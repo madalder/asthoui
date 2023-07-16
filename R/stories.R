@@ -2,7 +2,11 @@
 #' 
 #' Render stories as stacked cards.
 #' 
-#' @param html HTML to display ([htmltools::tags]).
+#' @param id Output id.
+#' @param expr Expression, should return [stories()]
+#' @param env Environment.
+#' @param quoted Whether to runs as quoted.
+#' @param ... Stories, any number of [story()] or content of the [story()]: any collection of [htmltools::tags].
 #' 
 #' @examples 
 #' library(shiny)
@@ -20,6 +24,7 @@
 #' if(interactive())
 #'  shinyApp(ui, server)
 #' 
+#' @name stories
 #' @export
 stories <- function(...){
   lst <- list(...)
@@ -27,16 +32,20 @@ stories <- function(...){
   if(length(lst) == 0L)
     stop("must pass one or more `story()`")
 
-  as.list(lst)
+  rev(as.list(lst))
 }
 
-story <- function(content) {
-  if(missing(content))
+#' @name stories
+#' @export
+story <- function(...) {
+  content <- list(...)
+  if(length(content) == 0L)
     stop("missing content")
 
   list(content = as.character(content))
 }
 
+#' @rdname stories
 #' @export
 renderStories <- function(expr, env = parent.frame(), quoted = FALSE) {
   # Convert the expression + environment into a function
@@ -47,6 +56,7 @@ renderStories <- function(expr, env = parent.frame(), quoted = FALSE) {
   }
 }
 
+#' @rdname stories
 #' @export
 storiesOutput <- function(id){
 
@@ -58,11 +68,9 @@ storiesOutput <- function(id){
       class = "stories",
       shiny::tags$div(
         class = "stories-stack",
-        tags$button(class = "buttons prev"),
         shiny::tags$ul(
           class = "stories-list"
-        ),
-        tags$button(class = "buttons next")
+        )
       )
     )
   )
@@ -70,7 +78,7 @@ storiesOutput <- function(id){
   deps <- list(
     htmltools::htmlDependency(
       name = "stories",
-      version = "1.0.0",
+      version = utils::packageVersion("asthoui"),
       src = "packer",
       script = "stories.js",
       stylesheet = "stories.min.css",

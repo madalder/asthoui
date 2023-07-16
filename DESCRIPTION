@@ -6,9 +6,9 @@ Authors@R:
     person(given = "John",
            family = "Coene",
            role = c("aut", "cre"),
-           email = "jcoenep@gmail.com",
+           email = "john@opifex.org",
            comment = c(ORCID = "0000-0002-6637-4107")),
-    person(family = "Opifex", role = c("fnd"))
+    person(family = "The Association of State and Territorial Health Officials", role = c("fnd", "cph"))
   )
 Description: UI framework for 'Astho'.UI framework for 'Astho'.
 License: file LICENSE

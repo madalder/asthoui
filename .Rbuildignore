@@ -7,3 +7,5 @@
 ^webpack\.common\.js$
 ^makefile$
 ^test\.R$
+^dev$
+^scss$
