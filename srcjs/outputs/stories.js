@@ -25,9 +25,10 @@ $.extend(storiesBinding, {
     var lastCard = $(".story-list .story").length - 1;
 
     resize(el);
-    window.onresize = () => {
+    window.addEventListener('resize', function(event) {
       resize(el);
-    } 
+    }, true);
+
 
     $(el).on("click", function(){
       var prependList = function() {

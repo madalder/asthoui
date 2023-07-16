@@ -13,5 +13,5 @@ sass:
 bundle-dev: 
 	R -e "packer::bundle_dev()"
 
-run: document
+run: sass bundle-dev
 	Rscript test.R

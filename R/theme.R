@@ -40,6 +40,7 @@ aDeps <- function() {
     name = "asthoui",
     version = utils::packageVersion("asthoui"),
     src = "packer",
+    script = "main.js",
     stylesheet = "styles.min.css",
     package = "asthoui"
   )
