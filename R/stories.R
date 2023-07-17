@@ -6,8 +6,7 @@
 #' @param expr Expression, should return [stories()]
 #' @param env Environment.
 #' @param quoted Whether to runs as quoted.
-#' @param ... Stories, any number of [story()].
-#' @param content Content of the [story()]: any collection of [htmltools::tags].
+#' @param ... Stories, any number of [story()], or content of the [story()]: any collection of [htmltools::tags].
 #' 
 #' @examples 
 #' library(shiny)
@@ -38,10 +37,8 @@ stories <- function(...){
 
 #' @name stories
 #' @export
-story <- function(content) {
-  if(missing(content))
-    stop("missing content")
-
+story <- function(...) {
+  content <- div(...)
   list(content = as.character(content))
 }
 
@@ -68,7 +65,7 @@ storiesOutput <- function(id){
       class = "stories",
       shiny::tags$div(
         class = "stories-stack",
-        shiny::tags$ul(
+        shiny::tags$div(
           class = "stories-list"
         )
       )

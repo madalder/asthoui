@@ -9,16 +9,14 @@
 \usage{
 stories(...)
 
-story(content)
+story(...)
 
 renderStories(expr, env = parent.frame(), quoted = FALSE)
 
 storiesOutput(id)
 }
 \arguments{
-\item{...}{Stories, any number of \code{\link[=story]{story()}}.}
-
-\item{content}{Content of the \code{\link[=story]{story()}}: any collection of \link[htmltools:builder]{htmltools::tags}.}
+\item{...}{Stories, any number of \code{\link[=story]{story()}}, or content of the \code{\link[=story]{story()}}: any collection of \link[htmltools:builder]{htmltools::tags}.}
 
 \item{expr}{Expression, should return \code{\link[=stories]{stories()}}}
 

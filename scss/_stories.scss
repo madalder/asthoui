@@ -14,46 +14,46 @@ $default-min: 5%;
     .stories-list {
       width: 30rem;
 
-      li {
-          transition: all 100ms ease-in-out;
-          border-radius: 2px;
-          position: absolute;
-          list-style: none;
-          height: 300px;
-          -webkit-box-shadow: 0 2px 15px 1px rgba(225, 225, 225, 0.5);
-          box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.5);    
-          left: 0;
-          right: 0;
-          margin: 0 auto;
-          padding-top: 20px;
-          text-align: center;
-          background-size:cover;
-          cursor: pointer;
+     .story {
+        transition: all 100ms ease-in-out;
+        border-radius: 2px;
+        position: absolute;
+        list-style: none;
+        min-height: 20rem;
+        -webkit-box-shadow: 0 2px 15px 1px rgba(225, 225, 225, 0.5);
+        box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.5);    
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding-top: 20px;
+        text-align: center;
+        background-size:cover;
+        cursor: pointer;
 
-          &:nth-child(1) {
-              top: ($default-diff * 2);
-              width: $default-width - $default-min * 4;
-              /* animation: scaleCard 100ms; */
-          }
-          &:nth-child(2) {
-              top: ($default-diff * 3);
-              width: $default-width - $default-min * 3;
-          }
-          &:nth-child(3) {
-              top: ($default-diff * 4);
-              width: $default-width - $default-min * 2;
-          }
-          &:nth-child(4) {
-              top: ($default-diff * 5);
-              width: $default-width - $default-min * 1;
-          }
-          &:nth-child(5) {
-              top: ($default-diff * 6);
-              width: $default-width - $default-min * 0;
-          }
+        &:nth-child(1) {
+          top: ($default-diff * 2);
+          width: $default-width - $default-min * 4;
+          /* animation: scaleCard 100ms; */
         }
-
+        &:nth-child(2) {
+          top: ($default-diff * 3);
+          width: $default-width - $default-min * 3;
+        }
+        &:nth-child(3) {
+          top: ($default-diff * 4);
+          width: $default-width - $default-min * 2;
+        }
+        &:nth-child(4) {
+          top: ($default-diff * 5);
+          width: $default-width - $default-min * 1;
+        }
+        &:nth-child(5) {
+          top: ($default-diff * 6);
+          width: $default-width - $default-min * 0;
+        }
       }
+
+    }
     
       &:hover {
       > .buttons.prev {

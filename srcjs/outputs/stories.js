@@ -6,7 +6,7 @@ const createCards = (cards) => {
 }
 
 const createCard = (card) => {
-  return `<li class="story bg-white">${card.content}</li>`
+  return `<div class="story bg-white">${card.content}</div>`
 }
 
 let storiesBinding = new Shiny.OutputBinding();
@@ -25,20 +25,22 @@ $.extend(storiesBinding, {
     var lastCard = $(".story-list .story").length - 1;
 
     resize(el);
-    window.addEventListener('resize', function(event) {
+    window.addEventListener('resize', (e) => {
       resize(el);
     }, true);
 
+    $(el).off("click");
 
-    $(el).on("click", function(){
+    $(el).on("click", (e) => {
+      console.log(e);
       var prependList = function() {
-        if( $('.story').hasClass('activeNow') ) {
+        if($(el).find('.story').hasClass('activeNow') ) {
           var $slicedCard = $('.story').slice(lastCard).removeClass('transformThis activeNow');
-          $(el).find('ul').prepend($slicedCard);
+          $(el).find('.stories-list').prepend($slicedCard);
         }
       }
 
-      $(el).find('li').last().removeClass('transformPrev').addClass('transformThis').prev().addClass('activeNow');
+      $(el).find('.story').last().removeClass('transformPrev').addClass('transformThis').prev().addClass('activeNow');
       setTimeout(function(){prependList(); }, 150);
     });
   }
