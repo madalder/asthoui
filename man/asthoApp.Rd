@@ -4,7 +4,7 @@
 \alias{asthoApp}
 \title{Atho themed application}
 \usage{
-asthoApp(..., title = aLogo(), window_title = "Astho")
+asthoApp(..., title = aLogo(), window_title = "Astho", collapsible = TRUE)
 }
 \arguments{
 \item{...}{Content of the page, passed to \code{\link[shiny:navbarPage]{shiny::navbarPage()}}.}
@@ -12,6 +12,8 @@ asthoApp(..., title = aLogo(), window_title = "Astho")
 \item{title}{Title of the application.}
 
 \item{window_title}{Title of the application on browser tab.}
+
+\item{collapsible}{Whether to collapse the navbar on small screens.}
 }
 \description{
 Astho themed application.

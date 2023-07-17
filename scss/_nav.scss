@@ -2,4 +2,14 @@ html {
   .navbar.navbar-default {
     background-color: white !important;
   }
+
+  @media (max-width: 995px){
+    .navbar-header {
+      width: 100%;
+    }
+
+    .navbar-toggle {
+      float:right;
+    }
+  }
 }
