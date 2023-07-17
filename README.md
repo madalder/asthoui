@@ -12,6 +12,18 @@ R package for [Astho](https://www.astho.org/)-theme Shiny UI.
 remotes::install_github("devOpifex/asthoui")
 ```
 
+## Docs
+
+- The function `asthoApp` works just like `shiny::navbarPage` but comes with
+dependencies for styles and other functionalities.
+- The `aPage` function takes three mandatory arguments: `left`, `center`, and `right`.
+The function creates a 3 column layout with a sidebar, a main body (`center`), and 
+a `right` bar (typically) containing "stories." 
+
+Note: `aPage` collapses sidebars into offcanvas drawers on medium screen BUT currently 
+does not restore them to their original column layout when the screen widens, this is a
+work in progress.
+
 ## Example
 
 This is a basic example which shows you how to solve a common problem:

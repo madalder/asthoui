@@ -2,17 +2,17 @@
 #' 
 #' Dashboard layout.
 #' 
-#' @param left,body,right Content of the page.
+#' @param left,center,right Content of the page.
 #' 
 #' @importFrom shiny div tags p
 #' 
 #' @export
 aPage <- function(
   left,
-  body,
+  center,
   right = NULL
 ){
-  if(missing(left) | missing(body) | missing(right))
+  if(missing(left) | missing(center) | missing(right))
     stop("must pass `left`, `body`, and `right`")
 
   div(
@@ -50,7 +50,7 @@ aPage <- function(
       ),
       div(
         class = "col-lg-7",
-        body
+        center
       ),
       div(
         class = "col-lg-3 flex-right d-none d-md-block right-bar",

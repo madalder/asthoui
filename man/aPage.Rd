@@ -4,10 +4,10 @@
 \alias{aPage}
 \title{Page}
 \usage{
-aPage(left, body, right = NULL)
+aPage(left, center, right = NULL)
 }
 \arguments{
-\item{left, body, right}{Content of the page.}
+\item{left, center, right}{Content of the page.}
 }
 \description{
 Dashboard layout.
