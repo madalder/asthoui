@@ -18,7 +18,7 @@ aPage <- function(
   div(
     class = "layout",
     p(
-      class = "d-sm-block d-md-none pb-2",
+      class = "d-md-block d-lg-none pb-2",
       tags$a(
         class = "float-left left-bar-trigger",
         shiny::icon("bars")
@@ -45,15 +45,15 @@ aPage <- function(
     div(
       class = "row",
       div(
-        class = "col-md-2 d-none d-md-block left-bar border-end border-secondary-subtle",
+        class = "col-lg-2 d-none d-md-block left-bar border-end border-secondary-subtle",
         left
       ),
       div(
-        class = "col-md-7",
+        class = "col-lg-7",
         body
       ),
       div(
-        class = "col-md-3 flex-right d-none d-md-block right-bar",
+        class = "col-lg-3 flex-right d-none d-md-block right-bar",
         right
       )
     ),

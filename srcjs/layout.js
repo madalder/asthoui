@@ -6,14 +6,14 @@ export const handlePage = () => {
     if(!window.innerWidth)
       return;
 
-    if(window.innerWidth > 760)
+    if(window.innerWidth > 994)
       return;
     
     moveAllToOffCanvas();
   });
 
   window.addEventListener('resize', function(event) {
-    if(window.innerWidth > 760)
+    if(window.innerWidth > 994)
       return;
     
     moveAllToOffCanvas();
