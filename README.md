@@ -39,7 +39,7 @@ ui <- asthoApp(
       left = div(
         h1("Sidebar")
       ),
-      body = div(
+      center = div(
         h1("Main page")
       ),
       right = div(
