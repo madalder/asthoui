@@ -29,7 +29,7 @@ aPage <- function(
       )
     ),
     div(
-      class = "offcanvas offcanvas-start offcanvas-left",
+      class = "offcanvas offcanvas-start offcanvas-left offcanvas-astho-left",
       tabindex = "-1",
       div(
         class = "offcanvas-header",
@@ -58,7 +58,7 @@ aPage <- function(
       )
     ),
     div(
-      class = "offcanvas offcanvas-end offcanvas-right",
+      class = "offcanvas offcanvas-end offcanvas-right offcanvas-astho-right",
       tabindex = "-1",
       div(
         class = "offcanvas-header",

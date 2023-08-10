@@ -24,6 +24,7 @@ asthoApp <- function(
     header = list(aDeps()),
     windowTitle = window_title,
     collapsible = collapsible,
+    id = "astho-main",
     ...
   )
 

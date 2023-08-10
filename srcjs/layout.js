@@ -1,24 +1,33 @@
+let intabs = false;
+let inOffcanvas = false;
+
 export const handlePage = () => {
   handleLeftBar();
   handleRightBar();
 
   $(() => {
-    if(!window.innerWidth)
+    if (!window.innerWidth) {
       return;
+    }
 
-    if(window.innerWidth > 994)
+    if (window.innerWidth > 991) {
+      intabs = true;
       return;
-    
+    }
+
     moveAllToOffCanvas();
   });
 
-  window.addEventListener('resize', function(event) {
-    if(window.innerWidth > 994)
+  window.addEventListener("resize", function (event) {
+    console.log(window.innerWidth);
+    if (window.innerWidth > 991) {
+      moveAllToTabs();
       return;
-    
+    }
+
     moveAllToOffCanvas();
   }, true);
-}
+};
 
 const handleLeftBar = () => {
   $(".left-bar-trigger").on("click", (e) => {
@@ -26,7 +35,7 @@ const handleLeftBar = () => {
     const ocInst = new bootstrap.Offcanvas(el);
     ocInst.show();
   });
-}
+};
 
 const handleRightBar = () => {
   $(".right-bar-trigger").on("click", (e) => {
@@ -34,27 +43,59 @@ const handleRightBar = () => {
     const ocInst = new bootstrap.Offcanvas(el);
     ocInst.show();
   });
-}
+};
 
 const moveToOffCanvas = (params) => {
-  let offcanvas = $(params.el).closest(".layout").find(`.offcanvas-${params.side}`);
-  let el = $(params.el).detach().removeClass("d-none d-md-block");
+  let offcanvas = $(params.el).closest(".layout").find(
+    `.offcanvas-${params.side}`,
+  );
+  let el = $(params.el).find("div").first().detach().removeClass(
+    "d-none d-md-block",
+  );
   $(offcanvas).find(".offcanvas-body").append(el);
   $(el).trigger("shown");
   return offcanvas;
-}
+};
 
-let moved = false;
+const moveToTab = (params) => {
+  let bar = $(params.el).closest(".layout").find(`.${params.side}-bar`);
+  let el = $(params.el).find(".offcanvas-body").find("div").first().detach()
+    .removeClass(
+      "d-none d-md-block",
+    );
+  $(bar).append(el);
+  $(el).trigger("shown");
+  return bar;
+};
+
 const moveAllToOffCanvas = () => {
-  if(moved)
+  if (inOffcanvas) {
     return;
+  }
 
-  moved = true;
+  intabs = false;
+  inOffcanvas = true;
   $(".layout")
     .find(".left-bar")
-    .each((i, el) => moveToOffCanvas({el: el, side: "left"}));
+    .each((i, el) => moveToOffCanvas({ el: el, side: "left" }));
 
   $(".layout")
     .find(".right-bar")
-    .each((i, el) => moveToOffCanvas({el: el, side: "right"}));
-}
+    .each((i, el) => moveToOffCanvas({ el: el, side: "right" }));
+};
+
+const moveAllToTabs = () => {
+  if (intabs) {
+    return;
+  }
+
+  intabs = true;
+  inOffcanvas = false;
+  $(".layout")
+    .find(".offcanvas-astho-left")
+    .each((i, el) => moveToTab({ el: el, side: "left" }));
+
+  $(".layout")
+    .find(".offcanvas-astho-right")
+    .each((i, el) => moveToTab({ el: el, side: "right" }));
+};

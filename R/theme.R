@@ -20,7 +20,7 @@ aTheme <- function(
   theme <- bs_theme(
     version = 5L,
     bootswatch = "materia", 
-    base_font = font_google("Jost", local = FALSE),
+    base_font = font_google("Jost", local = FALSE, wght = "300..800"),
     primary = primary,
     secondary = secondary,
     success = success,
