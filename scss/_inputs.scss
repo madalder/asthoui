@@ -9,4 +9,14 @@ html {
     padding: .5rem .75rem .5rem .75rem;
     background-color: white;
   }
+
+  .btn-special {
+    border: 2px solid $main-orange;
+    color: $main-orange;
+    background-color: white;
+
+    &:hover {
+      background-color: $main-blue !important;
+    }
+  }
 }
