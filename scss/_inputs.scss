@@ -1,0 +1,12 @@
+html {
+  .radio input:checked,
+  .checkbox input:checked {
+    background-color: $main-orange !important;
+    border-color: $main-orange !important;
+  }
+
+  .btn.dropdown-toggle{
+    padding: .5rem .75rem .5rem .75rem;
+    background-color: white;
+  }
+}

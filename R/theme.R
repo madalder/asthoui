@@ -10,11 +10,11 @@
 #' @export
 aTheme <- function(
   ..., 
-  primary = "#06476b",
-  secondary = "#DD5D2A",
+  primary = "#005182",
+  secondary = "#DD5D29",
   success = "#6BBE89",
+  warning = "#EBB41F",
   info = NULL,
-  warning = NULL,
   danger = NULL
 ){
   theme <- bs_theme(

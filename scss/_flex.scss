@@ -25,4 +25,202 @@ html {
       flex-shrink: 1;
     }
   }
+
+  .selectize-control.single .selectize-input {
+    border: 1px solid #70C4E8;
+    border-radius: 40px;
+    font-size: 14px;
+    color: #666;
+  }
+    
+  .btn.checkbtn {
+    border-radius: 10px !important;
+    background-color: #fff;
+    color: #003A5D;
+    text-transform: none !important;
+    border: none;
+    box-shadow: none;
+   }
+   
+  .btn.checkbtn:hover {
+    border-radius: 10px !important;
+    background-color: #fff !important;
+    color: #003A5D;
+    text-transform: none !important;
+    border: none;
+    box-shadow: none;}
+    
+  #inline label {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  #inline .form-group {
+    display: table-row;
+  }
+
+  #inline .selectize-input {
+    padding-right: 30px;
+  }
+
+  .button_style {
+    color: #fff;
+    background-color: #DD5D2A;
+    position: relative;
+    text-align:center;
+    border-radius: 100px;
+    border-color: #DD5D2A !important;
+    border-width: 3px !important;
+    text-transform: none !important;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-shadow: none;
+  }
+
+  .button_reset {
+    color: #fff;
+    background-color: #48B781;
+    position: relative;
+    text-align:center;
+    border-radius: 100px;
+    border-color: #DD5D2A !important;
+    border-width: 3px !important;
+    text-transform: none !important;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-shadow: none;
+  }
+
+  .picker_style {
+    border: 1px solid #70C4E8 !important;
+    border-radius: 40px;
+    font-size: 14px;
+    text-transform: none !important;
+    background-color: #fff;
+    box-shadow: none;
+    color: #666;
+  }
+
+  .column_w_bar {
+    padding-right: 2.5em;
+    box-shadow: none;
+    border-radius: 0px;
+    background-color: #fff;
+    border-right-color: #70C4E8;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-left-color: #fff;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  .stories_w_bar {
+    box-shadow: none;
+    border-radius: 0px;
+    background-color: #fff;
+    border-right-color: #70C4E8;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-left-color: #fff;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  .column_color {
+    padding-right: 2.5em;
+    box-shadow: none;
+    border-radius: 0px;
+    background-color: #F9F9F9;
+    border-right-color: #fff;
+    border-left-color: #fff;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  .column_color_2 {
+    padding-right: 2.5em;
+    box-shadow: none;
+    border-radius: 0px;
+    background-color: #70C4E8;
+    border-right-color: #fff;
+    border-left-color: #fff;
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+  }
+
+  .main_column {
+    padding-left: 3em;
+    padding-right: 5em;
+    box-shadow: none;
+  }
+
+  .data_story {
+    padding-right: 1em;
+    box-shadow: none;
+    height: 40em;
+    overflow-y: scroll;
+  }
+
+  hr {border-top: 1px solid #70C4E8;}
+
+  #accHome .accordion-item .collapsed {
+    background-color: #F9F9F9;
+    box-radius: 0px;
+  }
+
+  #accHome .accordion-body {
+    background-color: #F9F9F9;
+    box-radius: 0px;
+  }
+
+  #accHome .accordion-item {
+    background-color: #F9F9F9;
+    border-color: #477BAF !important;
+    border: .5px solid;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px !important;
+    box-radius: 0px !important
+  }
+
+  #accStory .accordion-item .collapsed {
+    background-color: #fff;
+    box-radius: 0px;
+  }
+
+  #accStory .accordion-body {
+    background-color: #fff;
+    box-radius: 0px;
+  }
+
+  #accStory .accordion-item {
+    background-color: #fff;
+    border-color: #477BAF !important;
+    border: 0px solid;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0px !important;
+    box-radius: 0px !important
+  }
+
+  .btn-group-toggle .btn-default {
+    background-color: #48B781;
+    color: #fff;
+    padding-left: 6px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-shadow: none;
+    border: 1px solid;
+    border-color: #fff;
+    border-radius: 20px;
+    text-transform: none !important;
+    align: center;
+    font-size: 14px;
+  }
 }
