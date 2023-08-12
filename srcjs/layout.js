@@ -73,6 +73,8 @@ const moveAllToOffCanvas = () => {
     return;
   }
 
+  $(".nav-tabs").addClass("float-tabs");
+
   intabs = false;
   inOffcanvas = true;
   $(".layout")
@@ -88,6 +90,8 @@ const moveAllToTabs = () => {
   if (intabs) {
     return;
   }
+
+  $(".nav-tabs").removeClass("float-tabs");
 
   intabs = true;
   inOffcanvas = false;

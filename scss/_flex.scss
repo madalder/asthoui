@@ -26,6 +26,10 @@ html {
     }
   }
 
+  .container-fluid > .tab-content {
+    padding-top: 4rem;
+  }
+
   .selectize-control.single .selectize-input {
     border: 1px solid #70C4E8;
     border-radius: 40px;

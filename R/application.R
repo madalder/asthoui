@@ -25,6 +25,7 @@ asthoApp <- function(
     windowTitle = window_title,
     collapsible = collapsible,
     id = "astho-main",
+    position = "fixed-top",
     ...
   )
 
