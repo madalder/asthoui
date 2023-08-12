@@ -43,17 +43,20 @@ aPage <- function(
       div(class = "offcanvas-body")
     ),
     div(
-      class = "row",
+      class = "d-flex",
       div(
-        class = "col-lg-2 d-none d-md-block left-bar border-end border-secondary-subtle",
+        class = "d-none d-lg-block left-bar border-end border-secondary-subtle",
+        style = "width:18%",
         left
       ),
       div(
-        class = "col-lg-7",
+        class = "center-bar",
+        style = "width:60%",
         center
       ),
       div(
-        class = "col-lg-3 flex-right d-none d-md-block right-bar",
+        class = "d-none d-lg-block right-bar",
+        style = "width:22%",
         right
       )
     ),
