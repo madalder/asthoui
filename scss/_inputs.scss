@@ -19,4 +19,10 @@ html {
       background-color: $main-blue !important;
     }
   }
+
+  .treejs .treejs-node__checked > .treejs-checkbox::before,
+  .treejs .treejs-node__halfchecked > .treejs-checkbox::before {
+    background-color: $main-orange;
+    border-color: $main-orange;
+  }
 }
