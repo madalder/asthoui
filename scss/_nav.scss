@@ -3,6 +3,12 @@ html {
     background-color: white !important;
   }
 
+  .nav-item {
+    .active {
+      color: $main-orange !important;
+    }
+  }
+
   @media (max-width: 994px){
     .navbar-header {
       width: 100%;
