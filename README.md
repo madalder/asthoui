@@ -40,7 +40,8 @@ ui <- asthoApp(
         h1("Sidebar")
       ),
       center = div(
-        h1("Main page")
+        h1("Main page"),
+		    actionButton("locate", "Geolocate")
       ),
       right = div(
         storiesOutput("stories")
@@ -86,6 +87,17 @@ server <- function(input, output, session) {
       )
     )
   })
+
+  # this launches the prompt asking the user for geo-location permissions
+	observeEvent(input$locate, {
+	  geo_locate()
+	})
+
+  # this reacts on the user prompt for coordinates
+	observeEvent(get_coordinates(), {
+	  state <- get_state()
+		print(state)
+	})
 }
 
 shinyApp(ui, server, options = list(port = 3002L))
