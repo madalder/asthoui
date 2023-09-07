@@ -4,10 +4,18 @@
 \alias{asthoApp}
 \title{Atho themed application}
 \usage{
-asthoApp(..., title = aLogo(), window_title = "Astho", collapsible = TRUE)
+asthoApp(
+  ...,
+  header = NULL,
+  title = aLogo(),
+  window_title = "Astho",
+  collapsible = TRUE
+)
 }
 \arguments{
 \item{...}{Content of the page, passed to \code{\link[shiny:navbarPage]{shiny::navbarPage()}}.}
+
+\item{header}{Additional headers.}
 
 \item{title}{Title of the application.}
 

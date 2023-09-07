@@ -25,4 +25,8 @@ html {
     background-color: $main-orange;
     border-color: $main-orange;
   }
+
+ .btn-secondary:focus, .btn-default:focus{
+   background-color: unset;
+ }
 }
