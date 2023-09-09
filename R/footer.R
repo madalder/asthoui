@@ -20,10 +20,33 @@ hide_footer <- function(
     stop("Missing `tabs`")
 
   session$sendCustomMessage(
-    "asthoui-footer", 
+    "asthoui-footer-hide", 
     list(
       id = id,
       tabs = as.list(tabs)
+    )
+  )
+}
+
+#' Inject Footer
+#' 
+#' Hide a footer in specific tabs.
+#' 
+#' @param footer Footer to inject.
+#' @param session A valid shiny session.
+#' 
+#' @export
+inject_footer <- function(
+  footer,
+  session = shiny::getDefaultReactiveDomain()
+) {
+  if(missing(footer))
+    stop("Missing `footer`")
+
+  session$sendCustomMessage(
+    "asthoui-footer-inject", 
+    list(
+      footer = as.character(footer)
     )
   )
 }

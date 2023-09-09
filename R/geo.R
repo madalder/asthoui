@@ -32,7 +32,10 @@ coordinates_to_state <- function(coordinates){
 
 	state_names <- states[["NAME"]]
 	ii <- as.integer(sf::st_intersects(pts, states))
-	state_names[ii]
+	name <- state_names[ii]
+  if(is.na(name))
+    return(NA_character_)
+  states[ii, ]
 }
 
 #'  Get State
