@@ -19,7 +19,6 @@ export const handlePage = () => {
   });
 
   window.addEventListener("resize", function (event) {
-    console.log(window.innerWidth);
     if (window.innerWidth > 991) {
       moveAllToTabs();
       return;

@@ -13,5 +13,8 @@ sass:
 bundle-dev: 
 	R -e "packer::bundle_dev()"
 
+install: default
+	R -e "devtools::install()"
+
 run: sass bundle-dev
 	Rscript test.R

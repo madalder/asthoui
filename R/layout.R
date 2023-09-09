@@ -20,11 +20,11 @@ aPage <- function(
     p(
       class = "d-md-block d-lg-none pb-2",
       tags$a(
-        class = "float-left left-bar-trigger",
-        shiny::icon("bars")
+        class = "float-left left-bar-trigger cursor cursor-pointer",
+        shiny::icon("filter")
       ),
       tags$a(
-        class = "float-right right-bar-trigger",
+        class = "float-right right-bar-trigger cursor cursor-pointer",
         shiny::icon("info")
       )
     ),

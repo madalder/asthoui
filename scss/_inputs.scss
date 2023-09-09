@@ -26,7 +26,14 @@ html {
     border-color: $main-orange;
   }
 
- .btn-secondary:focus, .btn-default:focus{
-   background-color: unset;
+ .btn-secondary:focus, .btn-default:focus:not(.btn-primary):not(.btn-info):not(.btn-success):not(.btn-warning):not(.btn-danger):not(.btn-dark):not(.btn-light):not([class*="btn-outline-"]) {
+   background-color: white !important;
+   color: $main-orange;
+   outline: none;
+   box-shadow: none;
+ }
+
+ button:focus:not(:focus-visible){
+   box-shadow: none;
  }
 }
