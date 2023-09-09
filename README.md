@@ -94,7 +94,7 @@ server <- function(input, output, session) {
 	})
 
   # this reacts on the user prompt for coordinates
-	observeEvent(get_coordinates(), {
+	observeEvent(get_state(), {
 	  state <- get_state()
 		print(state)
 	})

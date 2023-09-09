@@ -1,4 +1,8 @@
 html {
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
   .flex-container {
     display: flex;
     flex-direction: row;
