@@ -21,5 +21,6 @@ Imports:
     bslib
 Suggests:
     sf,
-    spData
+    spData,
+    shinyWidgets
 

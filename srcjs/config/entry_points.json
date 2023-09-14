@@ -1,4 +1,5 @@
 {
   "stories": "./srcjs/outputs/stories.js",
-  "main": "./srcjs/index.js"
+  "main": "./srcjs/index.js",
+  "tree": "./srcjs/tree.js"
 }
