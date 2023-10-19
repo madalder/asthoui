@@ -12,8 +12,18 @@ aPage <- function(
   center,
   right = NULL
 ){
-  if(missing(left) | missing(center) | missing(right))
-    stop("must pass `left`, `body`, and `right`")
+  if(missing(left) | missing(center))
+    stop("must pass `left`, and `center`")
+
+  lw <- 18
+  cw <- 60
+  rw <- 22
+
+  if(is.null(right)){
+    lw <- 18
+    cw <- 82
+    rw <- 0
+  }
 
   div(
     class = "layout",
@@ -23,10 +33,11 @@ aPage <- function(
         class = "float-left left-bar-trigger cursor cursor-pointer",
         shiny::icon("filter")
       ),
-      tags$a(
-        class = "float-right right-bar-trigger cursor cursor-pointer",
-        shiny::icon("info")
-      )
+      if(!is.null(right))
+        tags$a(
+          class = "float-right right-bar-trigger cursor cursor-pointer",
+          shiny::icon("info")
+        )
     ),
     div(
       class = "offcanvas offcanvas-start offcanvas-left offcanvas-astho-left",
@@ -46,33 +57,34 @@ aPage <- function(
       class = "d-flex",
       div(
         class = "d-none d-lg-block left-bar border-end border-secondary-subtle",
-        style = "width:18%",
+        style = sprintf("width:%s%%", lw),
         left
       ),
       div(
         class = "center-bar",
-        style = "width:60%",
+        style = sprintf("width:%s%%", cw),
         center
       ),
       div(
         class = "d-none d-lg-block right-bar",
-        style = "width:22%",
+        style = sprintf("width:%s%%", rw),
         right
       )
     ),
-    div(
-      class = "offcanvas offcanvas-end offcanvas-right offcanvas-astho-right",
-      tabindex = "-1",
+    if(!is.null(right))
       div(
-        class = "offcanvas-header",
-        tags$button(
-          type = "button",
-          class = "btn-close",
-          `data-bs-dismiss` = "offcanvas",
-          `aria-label` = "Close"
-        )
-      ),
-      div(class = "offcanvas-body")
-    )
+        class = "offcanvas offcanvas-end offcanvas-right offcanvas-astho-right",
+        tabindex = "-1",
+        div(
+          class = "offcanvas-header",
+          tags$button(
+            type = "button",
+            class = "btn-close",
+            `data-bs-dismiss` = "offcanvas",
+            `aria-label` = "Close"
+          )
+        ),
+        div(class = "offcanvas-body")
+      )
   )
 }

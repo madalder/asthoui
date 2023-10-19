@@ -57,8 +57,8 @@ const moveToOffCanvas = (params) => {
 };
 
 const moveToTab = (params) => {
-  let bar = $(params.el).closest(".layout").find(`.${params.side}-bar`);
-  let el = $(params.el).find(".offcanvas-body").find("div").first().detach()
+  const bar = $(params.el).closest(".layout").find(`.${params.side}-bar`);
+  const el = $(params.el).find(".offcanvas-body").find("div").first().detach()
     .removeClass(
       "d-none d-md-block",
     );
@@ -79,11 +79,16 @@ const moveAllToOffCanvas = () => {
   inOffcanvas = true;
   $(".layout")
     .find(".left-bar")
-    .each((i, el) => moveToOffCanvas({ el: el, side: "left" }));
+    .each((_, el) => moveToOffCanvas({ el: el, side: "left" }));
 
-  $(".layout")
-    .find(".right-bar")
-    .each((i, el) => moveToOffCanvas({ el: el, side: "right" }));
+  if (
+    $(".layout")
+      .find(".offcanvas-astho-right")
+  ) {
+    $(".layout")
+      .find(".right-bar")
+      .each((_, el) => moveToOffCanvas({ el: el, side: "right" }));
+  }
 };
 
 const moveAllToTabs = () => {
@@ -98,9 +103,14 @@ const moveAllToTabs = () => {
   inOffcanvas = false;
   $(".layout")
     .find(".offcanvas-astho-left")
-    .each((i, el) => moveToTab({ el: el, side: "left" }));
+    .each((_, el) => moveToTab({ el: el, side: "left" }));
 
-  $(".layout")
-    .find(".offcanvas-astho-right")
-    .each((i, el) => moveToTab({ el: el, side: "right" }));
+  if (
+    $(".layout")
+      .find(".offcanvas-astho-right")
+  ) {
+    $(".layout")
+      .find(".offcanvas-astho-right")
+      .each((_, el) => moveToTab({ el: el, side: "right" }));
+  }
 };
