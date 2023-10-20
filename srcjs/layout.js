@@ -81,14 +81,20 @@ const moveAllToOffCanvas = () => {
     .find(".left-bar")
     .each((_, el) => moveToOffCanvas({ el: el, side: "left" }));
 
-  if (
-    $(".layout")
-      .find(".offcanvas-astho-right")
-  ) {
-    $(".layout")
-      .find(".right-bar")
-      .each((_, el) => moveToOffCanvas({ el: el, side: "right" }));
-  }
+  $(".layout")
+    .each((_, el) => {
+      if (
+        $(el)
+          .find(".offcanvas-astho-right").length
+      ) {
+        $(el)
+          .find(".offcanvas-astho-right")
+          .each((_, el) => moveToOffCanvas({ el: el, side: "right" }));
+        $(".center-bar").css("width", "60%");
+        return;
+      }
+      $(el).find(".center-bar").css("width", "100%");
+    });
 };
 
 const moveAllToTabs = () => {
@@ -97,7 +103,6 @@ const moveAllToTabs = () => {
   }
 
   $(".nav-tabs").removeClass("float-tabs");
-  $(".center-bar").css("width", "60%");
 
   intabs = true;
   inOffcanvas = false;
@@ -105,12 +110,18 @@ const moveAllToTabs = () => {
     .find(".offcanvas-astho-left")
     .each((_, el) => moveToTab({ el: el, side: "left" }));
 
-  if (
-    $(".layout")
-      .find(".offcanvas-astho-right")
-  ) {
-    $(".layout")
-      .find(".offcanvas-astho-right")
-      .each((_, el) => moveToTab({ el: el, side: "right" }));
-  }
+  $(".layout")
+    .each((_, el) => {
+      if (
+        $(el)
+          .find(".offcanvas-astho-right").length
+      ) {
+        $(el)
+          .find(".offcanvas-astho-right")
+          .each((_, el) => moveToTab({ el: el, side: "right" }));
+        $(".center-bar").css("width", "60%");
+        return;
+      }
+      $(el).find(".center-bar").css("width", "100%");
+    });
 };
