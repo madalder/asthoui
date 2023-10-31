@@ -90,7 +90,7 @@ const moveAllToOffCanvas = () => {
         $(el)
           .find(".offcanvas-astho-right")
           .each((_, el) => moveToOffCanvas({ el: el, side: "right" }));
-        $(".center-bar").css("width", "60%");
+        $(".center-bar").css("width", "100%");
         return;
       }
       $(el).find(".center-bar").css("width", "100%");
