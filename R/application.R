@@ -31,5 +31,5 @@ asthoApp <- function(
     ...
   )
 
-  htmltools::tagQuery(div(app))$find(".navbar")$addClass("navbar-expand-lg")$allTags()
+  htmltools::tagQuery(div(app))$find(".navbar")$addClass("navbar-expand-xl")$allTags()
 }
