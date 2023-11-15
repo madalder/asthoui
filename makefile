@@ -16,5 +16,5 @@ bundle-dev:
 install: default
 	R -e "devtools::install()"
 
-run: sass bundle-dev
+dev: sass bundle-dev
 	Rscript test.R
