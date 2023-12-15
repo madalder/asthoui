@@ -11,7 +11,7 @@
 aTheme <- function(
   ..., 
   primary = "#005182",
-  secondary = "#DD5D29",
+  secondary = "#CF4A05",
   success = "#6BBE89",
   warning = "#EBB41F",
   info = NULL,
