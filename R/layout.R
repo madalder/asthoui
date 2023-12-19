@@ -15,13 +15,13 @@ aPage <- function(
   if(missing(left) | missing(center))
     stop("must pass `left`, and `center`")
 
-  lw <- 18
-  cw <- 60
+  lw <- 22
+  cw <- 56
   rw <- 22
 
   if(is.null(right)){
-    lw <- 18
-    cw <- 82
+    lw <- 22
+    cw <- 78
     rw <- 0
   }
 
