@@ -4,8 +4,7 @@ html {
   }
 
   .float-tabs {
-    position: absolute;
-    left: 45%;
-    top: 4.5rem;
+    display: flex;
+    justify-content: center;
   }
 }
